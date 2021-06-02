@@ -1,0 +1,33 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo
+    container_name: "mongodb"
+    ports:
+      - "27017:27017"
+    volumes:
+      - "mongodata:/data/db"
+    networks:
+      - network1
+
+  go-api-1:
+    build: ./api1
+    container_name: "go-rest-api-1"
+    ports:
+      - "10005:10005"
+    networks:
+      - network1
+
+  go-api-2:
+    build: ./api2
+    container_name: "go-rest-api-2"
+    ports:
+      - "10006:10006"
+    networks:
+      - network1
+
+volumes:
+   mongodata:
+
+networks:
+   network1:
