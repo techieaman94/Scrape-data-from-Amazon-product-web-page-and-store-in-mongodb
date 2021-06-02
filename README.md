@@ -1,4 +1,4 @@
-# REST APIs in Golang to scrape an Amazon product web page given its URL, and store product details in MongoDB
+# REST APIs in GOlang to scrape an Amazon product web page given its URL, and store product details in MongoDB
 
 ## Description
 
@@ -8,9 +8,13 @@ This repo contains ready to use RESTfull APIs in GOlang.
 
  * REST_API_2 (POST) takes a JSON structure of product detail in request payload and store it along with timestamp in MongoDB (Database: "dummyStore", Collection:"productsDetails") to persist the information.
 
-## Getting Started
+ * REST_API_1 uses [Colly](https://github.com/gocolly/colly) library for scraping.
+ 
+ * Each service is dockerized as separate image.
+
 
 ### Project structure
+```
 .
 ├── api1
 |   ├── REST_API_1.go
@@ -20,10 +24,7 @@ This repo contains ready to use RESTfull APIs in GOlang.
 |   └── Dockerfile
 ├── docker-compose.yml
 └── README
-
-### Dependencies
-
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
+```
 
 ## Installation
 
@@ -34,8 +35,8 @@ $ curl -sSL https://get.docker.com/ | sh
 $ sudo pip install docker-compose
 ```
 
-See [Docker installation details](https://docs.docker.com/engine/install/).
-See [Docker Compose installation details](https://docs.docker.com/compose/install/).
+* See [Docker installation details](https://docs.docker.com/engine/install/).
+* See [Docker Compose installation details](https://docs.docker.com/compose/install/).
 
 
 
