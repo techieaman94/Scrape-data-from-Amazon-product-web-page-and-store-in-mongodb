@@ -18,7 +18,7 @@ This repo contains ready to use RESTfull APIs in GOlang.
 .
 ├── api1
 |   ├── REST_API_1.go
-|   ├── Dockerfile
+|   └── Dockerfile
 ├── api2
 |   ├── REST_API_2.go
 |   └── Dockerfile
